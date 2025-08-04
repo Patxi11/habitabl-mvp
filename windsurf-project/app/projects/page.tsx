@@ -91,7 +91,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">{t('projects.title')}</h1>
+          <h1 className="text-3xl font-medium text-white mb-2">{t('projects.title')}</h1>
           <p className="text-xl text-gray-400 max-w-3xl">{t('projects.subtitle')}</p>
         </div>
 
@@ -105,12 +105,12 @@ export default function Projects() {
                 placeholder="Search projects by name, location, or description..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 pl-10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                className="w-full bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg px-4 py-3 pl-10 text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
               />
             </div>
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="bg-gray-800 text-white font-medium py-3 px-4 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
+              className="bg-[#1a1a1a] border border-[#2a2a2a] text-white font-medium py-3 px-4 rounded-lg hover:bg-[#2a2a2a] transition-all duration-200 flex items-center"
             >
               <Filter className="w-4 h-4 mr-2" />
               Filters
@@ -124,7 +124,7 @@ export default function Projects() {
 
           {/* Filter Options */}
           {showFilters && (
-            <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-6">
               <h3 className="font-medium mb-3 text-white">Filter by Tags</h3>
               <div className="flex flex-wrap gap-2">
                 {availableFilters.map((filter) => (
@@ -200,8 +200,8 @@ export default function Projects() {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-white">Don't see what you're looking for?</h3>
+          <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-medium mb-4 text-white">Don't see what you're looking for?</h3>
             <p className="text-gray-400 mb-6">
               Have a project site or development opportunity that could benefit from our platform? 
               Submit it for review by our team.

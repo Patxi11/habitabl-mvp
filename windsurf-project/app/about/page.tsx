@@ -46,7 +46,7 @@ export default function About() {
 
         {/* Contact Section */}
         <div className="mt-16 pt-16 border-t border-gray-800">
-          <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 max-w-2xl">
+          <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-8 max-w-2xl">
             <h2 className="text-2xl font-medium text-white mb-4">Get in Touch</h2>
             <p className="text-gray-400 mb-6">
               If you're interested in working together or learning more, reach out to us.

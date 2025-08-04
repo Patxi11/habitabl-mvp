@@ -80,7 +80,7 @@ export default function SignupPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="card hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+            <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-6 hover:border-[#2a2a2a] transition-all duration-200 cursor-pointer"
                  onClick={() => setUserType('participate')}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -115,7 +115,7 @@ export default function SignupPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors duration-200 cursor-pointer"
+            <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-6 hover:border-[#2a2a2a] transition-all duration-200 cursor-pointer"
                  onClick={() => setUserType('promote')}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -156,15 +156,15 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black">
       <Navigation />
       
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl font-medium text-white mb-4">
             {userType === 'participate' ? 'Join as Participant' : 'Join as Promoter'}
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             {userType === 'participate' 
               ? 'Connect with sustainable development opportunities and aligned stakeholders'
               : 'Promote sustainable development in your community'
@@ -172,10 +172,10 @@ export default function SignupPage() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="card space-y-6">
+        <form onSubmit={handleSubmit} className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-6 space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 First Name *
               </label>
               <input
@@ -183,11 +183,11 @@ export default function SignupPage() {
                 required
                 value={formData.firstName}
                 onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
-                className="input-field"
+                className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Last Name *
               </label>
               <input
@@ -195,13 +195,13 @@ export default function SignupPage() {
                 required
                 value={formData.lastName}
                 onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
-                className="input-field"
+                className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
             </label>
             <input
@@ -209,12 +209,12 @@ export default function SignupPage() {
               required
               value={formData.email}
               onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-              className="input-field"
+              className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Organization *
             </label>
             <input
@@ -222,13 +222,13 @@ export default function SignupPage() {
               required
               value={formData.organization}
               onChange={(e) => setFormData(prev => ({ ...prev, organization: e.target.value }))}
-              className="input-field"
+              className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
               placeholder={userType === 'participate' ? 'Company, firm, or organization' : 'City, agency, or organization'}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Role/Title *
             </label>
             <input
@@ -236,13 +236,13 @@ export default function SignupPage() {
               required
               value={formData.role}
               onChange={(e) => setFormData(prev => ({ ...prev, role: e.target.value }))}
-              className="input-field"
+              className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
               placeholder={userType === 'participate' ? 'e.g., Architect, Developer, Investor' : 'e.g., Planning Director, Economic Development Manager'}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Primary Location *
             </label>
             <input
@@ -250,13 +250,13 @@ export default function SignupPage() {
               required
               value={formData.location}
               onChange={(e) => setFormData(prev => ({ ...prev, location: e.target.value }))}
-              className="input-field"
+              className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200"
               placeholder="City, State"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Areas of Interest (select all that apply)
             </label>
             <div className="grid grid-cols-2 gap-2">
@@ -275,13 +275,13 @@ export default function SignupPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Experience & Background
             </label>
             <textarea
               value={formData.experience}
               onChange={(e) => setFormData(prev => ({ ...prev, experience: e.target.value }))}
-              className="input-field h-24 resize-none"
+              className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200 h-24 resize-none"
               placeholder={userType === 'participate' 
                 ? 'Tell us about your experience in development, architecture, investment, etc.'
                 : 'Tell us about your community and development priorities'
@@ -290,13 +290,13 @@ export default function SignupPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
               Goals & Objectives
             </label>
             <textarea
               value={formData.goals}
               onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
-              className="input-field h-24 resize-none"
+              className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-all duration-200 h-24 resize-none"
               placeholder={userType === 'participate'
                 ? 'What are you hoping to achieve through Habitable?'
                 : 'What development outcomes are you seeking for your community?'
@@ -306,21 +306,21 @@ export default function SignupPage() {
 
           <div className="flex items-center">
             <input type="checkbox" required className="mr-2" />
-            <span className="text-sm text-gray-600">
-              I agree to the <a href="/terms" className="text-primary-600 hover:underline">Terms of Service</a> and{' '}
-              <a href="/privacy" className="text-primary-600 hover:underline">Privacy Policy</a>
+            <span className="text-sm text-gray-400">
+              I agree to the <a href="/terms" className="text-gray-400 hover:underline">Terms of Service</a> and{' '}
+              <a href="/privacy" className="text-gray-400 hover:underline">Privacy Policy</a>
             </span>
           </div>
 
-          <button type="submit" className="btn-primary w-full">
+          <button type="submit" className="bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-all duration-200 w-full">
             Create Account
           </button>
         </form>
 
         <div className="text-center mt-6">
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Already have an account?{' '}
-            <a href="/login" className="text-primary-600 hover:underline font-medium">
+            <a href="/login" className="text-gray-400 hover:underline font-medium">
               Sign in
             </a>
           </p>

@@ -46,7 +46,7 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
 
   return (
     <>
-      <div className="card hover:shadow-lg transition-shadow duration-200">
+      <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg p-6 hover:border-[#2a2a2a] transition-all duration-200">
         <div className="aspect-video bg-gray-200 rounded-lg mb-4 overflow-hidden">
           <img 
             src={project.imageUrl} 
@@ -60,51 +60,51 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
         
         <div className="flex flex-wrap gap-2 mb-3">
           {project.tags.map((tag) => (
-            <span key={tag} className="px-2 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">
+            <span key={tag} className="px-2 py-1 bg-[#2a2a2a] text-gray-300 text-sm rounded-full">
               {tag}
             </span>
           ))}
         </div>
         
-        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+        <h3 className="text-xl font-medium mb-2 text-white">{project.title}</h3>
         
-        <div className="flex items-center text-gray-600 mb-2">
+        <div className="flex items-center text-gray-400 mb-2">
           <MapPin className="w-4 h-4 mr-1" />
           <span className="text-sm">{project.location}</span>
         </div>
         
-        <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+        <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
         
         <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
           <div>
             <span className="text-gray-500">Investment Range:</span>
-            <div className="font-medium">{project.investmentRange}</div>
+            <div className="font-medium text-gray-300">{project.investmentRange}</div>
           </div>
           <div>
             <span className="text-gray-500">Timeline:</span>
-            <div className="font-medium">{project.timeline}</div>
+            <div className="font-medium text-gray-300">{project.timeline}</div>
           </div>
         </div>
         
         {project.impactMetrics && (
           <div className="mb-4">
-            <h4 className="text-sm font-medium text-gray-700 mb-2">Impact Metrics</h4>
+            <h4 className="text-sm font-medium text-gray-300 mb-2">Impact Metrics</h4>
             <div className="grid grid-cols-3 gap-2 text-sm">
               {project.impactMetrics.affordableUnits && (
                 <div className="text-center">
-                  <div className="font-semibold text-accent-600">{project.impactMetrics.affordableUnits}</div>
+                  <div className="font-semibold text-white">{project.impactMetrics.affordableUnits}</div>
                   <div className="text-gray-500 text-xs">Affordable Units</div>
                 </div>
               )}
               {project.impactMetrics.greenSpaceAcres && (
                 <div className="text-center">
-                  <div className="font-semibold text-accent-600">{project.impactMetrics.greenSpaceAcres}</div>
+                  <div className="font-semibold text-white">{project.impactMetrics.greenSpaceAcres}</div>
                   <div className="text-gray-500 text-xs">Green Space Acres</div>
                 </div>
               )}
               {project.impactMetrics.jobsCreated && (
                 <div className="text-center">
-                  <div className="font-semibold text-accent-600">{project.impactMetrics.jobsCreated}</div>
+                  <div className="font-semibold text-white">{project.impactMetrics.jobsCreated}</div>
                   <div className="text-gray-500 text-xs">Jobs Created</div>
                 </div>
               )}
@@ -116,7 +116,7 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
           <span className="text-sm text-gray-500">Seeking:</span>
           <div className="flex flex-wrap gap-1 mt-1">
             {project.stakeholdersNeeded.map((stakeholder) => (
-              <span key={stakeholder} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+              <span key={stakeholder} className="px-2 py-1 bg-[#2a2a2a] text-gray-300 text-xs rounded">
                 {stakeholder}
               </span>
             ))}
@@ -125,7 +125,7 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
         
         <button
           onClick={() => setShowInterestModal(true)}
-          className="btn-primary w-full"
+          className="bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-all duration-200 w-full py-3"
         >
           {t('project.interest.title')}
         </button>
@@ -134,8 +134,8 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
       {/* Interest Modal */}
       {showInterestModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-md w-full p-6">
-            <h3 className="text-xl font-bold text-gray-100 mb-2">{t('project.interest.title')}</h3>
+          <div className="bg-[#111111] border border-[#1a1a1a] rounded-lg max-w-md w-full p-6">
+            <h3 className="text-xl font-medium text-white mb-2">{t('project.interest.title')}</h3>
             <p className="text-gray-400 mb-6">{t('project.interest.subtitle')} {project.title}?</p>
             
             <div className="space-y-3">
@@ -145,9 +145,9 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
                   <button
                     key={type.id}
                     onClick={() => handleInterestClick(type.id)}
-                    className="w-full flex items-center p-3 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors duration-200"
+                    className="w-full flex items-center p-3 border border-[#2a2a2a] rounded-lg hover:border-gray-600 hover:bg-[#1a1a1a] transition-colors duration-200 text-gray-300"
                   >
-                    <Icon className="w-5 h-5 text-primary-600 mr-3" />
+                    <Icon className="w-5 h-5 text-gray-400 mr-3" />
                     <span>{type.label}</span>
                   </button>
                 )
@@ -156,7 +156,7 @@ export default function ProjectCard({ project, onExpressInterest }: ProjectCardP
             
             <button
               onClick={() => setShowInterestModal(false)}
-              className="btn-secondary w-full mt-4"
+              className="bg-[#1a1a1a] border border-[#2a2a2a] text-gray-300 font-medium py-3 px-4 rounded-lg hover:bg-[#2a2a2a] transition-all duration-200 w-full mt-4"
             >
               {t('project.interest.cancel')}
             </button>

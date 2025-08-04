@@ -22,11 +22,56 @@ const translations = {
     'nav.signUp': 'Sign Up',
     'nav.logIn': 'Log In',
     
+    // Hero buttons
+    'hero.participate': 'Participate',
+    'hero.promote': 'Promote',
+    
     // Homepage
-    'home.hero.title': 'Habitable helps make high-impact urban projects happen in the right places',
+    'home.hero.title': 'Habitable makes high-impact urban projects happen in the right places',
     'home.hero.subtitle': 'A platform that streamlines pre-development and aligns key players early around projects that benefit people and cities.',
     'home.hero.exploreProjects': 'Explore Projects',
     'home.hero.getStarted': 'Get Started',
+    
+    // Hero Component
+    'hero.subtitle': 'Sustainable Urban Development Platform',
+    'hero.description': 'Aligning key actors in urban housing development around investable, sustainable, and resilient projects in overlooked urban areas.',
+    'hero.cta.explore': 'Explore Projects',
+    'hero.cta.submit': 'Submit Project',
+    'hero.stats.projects': 'Active Projects',
+    'hero.stats.cities': 'Cities',
+    'hero.stats.investment': 'Total Investment',
+    
+    // Features Component
+    'features.title': 'Why Choose Habitable',
+    'features.subtitle': 'Our platform brings together the right stakeholders at the right time to create sustainable urban development.',
+    'features.curated.title': 'Curated Opportunities',
+    'features.curated.description': 'Access pre-vetted development projects with clear investment potential and community impact.',
+    'features.network.title': 'Stakeholder Network',
+    'features.network.description': 'Connect with architects, developers, investors, and communities aligned around sustainable development.',
+    'features.investment.title': 'Investment Ready',
+    'features.investment.description': 'Projects come with financial models, feasibility studies, and clear investment structures.',
+    'features.sustainable.title': 'Sustainability Focus',
+    'features.sustainable.description': 'Every project prioritizes environmental sustainability and community resilience.',
+    'features.location.title': 'Strategic Locations',
+    'features.location.description': 'Focus on overlooked urban areas with high potential for positive transformation.',
+    'features.collaboration.title': 'Collaborative Process',
+    'features.collaboration.description': 'Structured approach to align all stakeholders from concept to completion.',
+    'features.cta.text': 'Ready to get started with sustainable urban development?',
+    'features.cta.participate': 'Join as Participant',
+    'features.cta.promote': 'Join as Promoter',
+    
+    // CTA Component
+    'cta.title': 'Ready to Transform Urban Development?',
+    'cta.subtitle': 'Join our community of architects, developers, investors, and cities working together to create sustainable urban communities.',
+    'cta.getStarted': 'Get Started Today',
+    'cta.learnMore': 'Learn More',
+    'cta.participate.title': 'For Participants',
+    'cta.participate.description': 'Architects, developers, investors, and buyers looking to collaborate on sustainable projects.',
+    'cta.participate.action': 'Explore Projects',
+    'cta.promote.title': 'For Promoters',
+    'cta.promote.description': 'Cities and landowners looking to promote sustainable development in their communities.',
+    'cta.promote.action': 'Submit Project',
+    'cta.note': 'Join thousands of professionals already transforming urban development through collaboration.',
     // Features - Habitable Process
     'home.process.title': 'How Habitable Works',
     
@@ -204,6 +249,10 @@ const translations = {
     'nav.about': 'Acerca de',
     'nav.signUp': 'Registrarse',
     'nav.logIn': 'Iniciar Sesión',
+    
+    // Hero buttons
+    'hero.participate': 'Participar',
+    'hero.promote': 'Promover',
     
     // Homepage
     'home.hero.title': 'Habitable impulsa proyectos urbanos de alto impacto en los lugares correctos.',
